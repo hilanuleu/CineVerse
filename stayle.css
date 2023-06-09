@@ -5,15 +5,15 @@ body {
 }
 
 .preview-img {
-    width: 40%;
-    margin-left: 50px;
-    margin-top: 20px;
+  width: 40%;
+  margin-left: 2px;
+  margin-top: 20px;
 }
 
 .preview-img img {
-    width: 30%;
-    height: 30%;
-    object-fit: cover;
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
 }
 
 *,
@@ -52,113 +52,227 @@ p {
 
 .container {
   max-width: 1470px;
-  margin: 0 auto;
   padding: 0 20px;
 }
 
+form {
+  display: flex;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+button[type="submit"] {
+  padding: 8px 27px;
+  background-color: #967051;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  padding: 8px 450px;
+}
+
+.search {
+  position: absolute;
+  top: 12%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  left: 170px;
+  padding: 8px 17px;
+}
+
 .header-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px 0;
-    border: 10px;
-  }
-  
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 100px 0;
+}
 
-  li {
-    margin-left: 0px;
-  }
-  
-  a {
-    color: white;
-    font-weight: bold;
-    font-size: 17px;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  ul li:nth-child(even) {
-    margin-right: 10px;
-  }
+li {
+  margin-left: 0px;
+}
 
+a {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+}
 
-  body {
-    background: rgb(16, 14, 14);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+ul li:nth-child(even) {
+  margin-right: 10px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  to {
+    opacity: 1;
   }
+}
+@media only screen and (max-width: 768px) {
   .login-box {
-    background-color: #333;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    max-width: 500px;
-    width: 90%;
-    margin: 0 auto;
-    animation-name: fade-in;
-    animation-duration: 1s;
-  }
-  .login-box h2 {
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #fff;
+    padding: 20px;
   }
   .login-box input[type="text"],
   .login-box input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 8px;
   }
   .login-box input[type="submit"] {
-    background-color: #ff5f6d;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    padding: 8px;
   }
-  a{
-    background-color: #ff5f6d;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-    text-decoration: none;
-  }
-  .login-box input[type="submit"]:hover {
-    background-color: #e53d59;
-  }
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .login-box {
-      padding: 20px;
-    }
-    .login-box input[type="text"],
-    .login-box input[type="password"] {
-      padding: 8px;
-    }
-    .login-box input[type="submit"] {
-      padding: 8px;
-    }
-  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.login-signup {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+  padding: 14px;
+}
+
+.login-signup-popup {
+  padding: 10px 20px;
+  background-color: rgb(47, 47, 47);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,600&display=swap");
+
+.quiz-header {
+  padding: 4rem;
+}
+
+h2 {
+  padding: 0 1rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+.submit {
+  border: none;
+  background-color: #967051;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+#submit:focus:after {
+  content: ", Son Kararım 👍";
+}
+
+#submit:focus {
+  outline: none;
+  background-color: #9d7b5f;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  display: none;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 1.8rem;
+  cursor: pointer;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #ddd;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #d5b88f;
+  border-radius: 100%;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+}
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+}
+
+.test {
+  background-color: rgb(47, 47, 47);
+  border: none;
+}
